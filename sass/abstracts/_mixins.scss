@@ -1,0 +1,64 @@
+@mixin clearfix {
+    &::after {              //
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// MediaQuery Manager
+/*
+0-600px -- Phone
+600-900px -Tablet Portrait
+900-1200px; Tablet landscape
+[1200 - 1800] is where normal styles apply
+1080px + ;      Big Desktop
+ 
+$breakpoint argument choices;
+- phone
+- tab-port
+- big-desktop
+*/
+
+// ORDER: Base + typograpgy + general layout + grid > page layout > components
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == smalltweak {
+
+        @media (max-width: 20rem) { @content };
+    }
+
+    @if $breakpoint(lowest) {
+
+        @media  (max-width: 24rem) { @content };
+        
+    }
+        @if $breakpoint == iphone {
+            @media (max-width: 27em) { @content };  //432px
+
+        }
+        @if $breakpoint == minitweak {
+            @media (max-width: 30.5em) { @content };
+        }
+
+    @if $breakpoint == phonefour {
+        @media (max-width: 36em) { @content };  //576px
+    }
+
+    @if $breakpoint == phone {
+        @media (max-width: 45.7em) { @content };  // 731px
+    }
+    
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content };  //900px 
+    }
+
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) { @content }; //1200px
+    }
+ 
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) { @content }; //1800
+    }
+}

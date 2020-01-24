@@ -1,0 +1,327 @@
+
+
+.row {
+    max-width: $grid-width;         //GRID WIDTH = 114rem
+    margin: 0 auto;
+
+    &:not(:last-child)  { // Selects everything but last child element not();
+        margin-bottom: $gutter-vertical;        // 8rem
+
+        @include respond(tab-port) {
+            margin-bottom: $gutter-vertical-small;
+        }
+    }
+
+    @include respond(tab-port) {
+        max-width: 50rem;
+        padding: 0 3rem;
+
+    }
+
+
+    @include clearfix;
+
+    [class^="col-"] {
+       float:left;
+       
+
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+
+        }
+        @include respond(tab-port) {
+            margin-right: 0;
+            margin-bottom: $gutter-vertical-small;
+        }
+
+        @include respond(tab-port) {
+            width: 100% !important;
+            position: relative;
+            top: -6rem;
+        }
+    }
+
+    .col-1-of-2 {
+        width: calc((100% - #{$gutter-horizontal}) /2);             // 2 Columns
+      
+    }
+
+    .col-1-of-3 {                                                   // 3 Columns
+        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+
+    }
+
+    .col-2-of-3 {                       //66% - 33%
+        width: calc( 2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+
+    }
+
+    .col-1-of-4 {   // 25%
+        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+
+    }
+    .col-menu-grid {   // 25%
+        width: calc((100% - 4 * #{$gutter-horizontal}) / 4);
+
+    }
+
+    .col-2-of-4 {   // 25 25 + 25 25
+        width: calc( 2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+
+    }
+
+    .col-3-of-4 { //75% + 25%
+        width: calc( 3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+
+    }
+
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menurow {   //menurow
+    @include clearfix;
+    text-align: left;
+    padding: 6rem;
+    margin-top: 10rem;
+    font-family: "Nanum Myeongjo", sans-serif;
+    &:not(:last-child)  { // Selects everything but last child element not();
+        margin-bottom: $gutter-vertical;        // 8rem
+
+        @include respond(tab-port) {
+            margin-bottom: $gutter-vertical-small;
+            padding: 0rem;
+            margin-top: 3rem;
+        }
+ 
+    }
+
+    @include respond(phone) {
+        text-align: left;
+        /* padding: 3rem; */
+        margin-top: 8rem;
+        margin-left: -1rem;
+        padding-bottom: 18rem;
+        font-family: "Nanum Myeongjo", sans-serif;
+    }
+    @include respond(iphone) {
+        margin-left:-2.5rem;
+    }
+
+
+    @include clearfix;
+
+    [class^="col-"] {
+      // float:left;
+       
+      // &:not(:last-child) {
+       // margin-right: 1rem;
+
+    //}
+
+     
+        @include respond(tab-port) {
+            margin-right: 0%;
+            max-width: 43%;
+            margin-bottom: 0%;
+        }
+
+        @include respond(tab-port) {
+            width: 41% !important;
+            margin-left: 6rem;
+        }
+        @include respond(phone) {
+            width: 34% !important;
+            margin-left: 7rem;
+
+        }
+
+        @include respond(phonefour) {
+            font-family: "Nanum Myeongjo", sans-serif;
+    /* float: left; */
+    width: 25%;
+    display: inline-table;
+    margin-left: 17rem;
+    margin-bottom: 2rem;
+    padding: 10px;
+        }
+    }
+
+    .col-1-of-2 {
+        width: calc((100% - #{$gutter-horizontal}) /2);             // 2 Columns
+      
+    }
+
+    .col-1-of-3 {                                                   // 3 Columns
+        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+
+    }
+
+    .col-2-of-3 {                       //66% - 33%
+        width: calc( 2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+
+    }
+
+    .col-1-of-4 {   // 25%
+        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+
+    }
+    .col-menu-grid {   // 25%
+      // width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+      //  padding-bottom: 4rem;
+      //margin-left: 3rem;
+      font-family: "Nanum Myeongjo", sans-serif;
+
+      float: left;
+      width: 25%;
+      padding: 10px;
+    
+      
+    }
+
+    .col-2-of-4 {   // 25 25 + 25 25
+        width: calc( 2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+
+    }
+
+    .col-3-of-4 { //75% + 25%
+        width: calc( 3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+
+    }
+
+    
+
+}
+
+
+
+
+/*
+
+.slideshow {
+    max-width: $grid-width;         //GRID WIDTH = 114rem
+
+.slideshow {
+    overflow: hidden;
+    height: 400px;
+  
+  }
+  
+  .slide-wrapper {
+    //width: 291px;
+    -webkit-animation: slide 18s ease infinite;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+  }
+  
+  .slide {
+    float: left;
+    height: 50px;
+    width: 50px;
+  }
+  
+  
+  
+  .slide-number {
+    color: #000;
+    text-align: center;
+    font-size: 10em;
+  }
+  
+  @keyframes slide {
+    20% {margin-left: 0px;}
+    30% {margin-left: -728px;}
+    50% {margin-left: -728px;}
+    60% {margin-left: -1456px;}
+    70% {margin-left: -1456px;}
+    80% {margin-left: -2184px;}
+    90% {margin-left: -2184px;}
+  }
+  
+
+    &:not(:last-child)  { // Selects everything but last child element not();
+        margin-bottom: $gutter-vertical;        // 8rem
+
+        @include respond(tab-port) {
+            margin-bottom: $gutter-vertical-small;
+        }
+    }
+
+    @include respond(tab-port) {
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
+
+
+    @include clearfix;
+
+    [class^="col-"] {
+       float:left;
+       
+
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+
+        }
+        @include respond(tab-port) {
+            margin-right: 0;
+            margin-bottom: $gutter-vertical-small;
+        }
+
+        @include respond(tab-port) {
+            width: 100% !important;
+        }
+    }
+
+    .col-1-of-2 {
+        width: calc((100% - #{$gutter-horizontal}) /2);             // 2 Columns
+      
+    }
+
+    .col-1-of-3 {                                                   // 3 Columns
+        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+
+    }
+
+    .col-2-of-3 {                       //66% - 33%
+        width: calc( 2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+
+    }
+
+    .col-1-of-4 {   // 25%
+        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+
+    }
+    .col-menu-grid {   // 25%
+        width: calc((100% - 4 * #{$gutter-horizontal}) / 4);
+
+    }
+
+    .col-2-of-4 {   // 25 25 + 25 25
+        width: calc( 2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+
+    }
+
+    .col-3-of-4 { //75% + 25%
+        width: calc( 3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+
+    }
+
+    
+
+}
+*/

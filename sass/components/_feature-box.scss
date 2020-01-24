@@ -1,0 +1,423 @@
+.feature-box {
+    background-color: rgba($color-white, .8);
+    font-size: 1.5rem;
+  //  padding: 3.5rem;  
+                                      // FEAUTURE ROLLS
+    text-align: center;
+    border-radius: 3px; 
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    transition: transform .3s;  
+   // position: relative;
+  //  top: -20rem;
+    display: inline;          
+
+}
+
+// Height of section
+.carousel {
+    height: 53rem;
+    position: relative;
+    width: 100%;
+    background: linear-gradient(110deg, #36d1a2 60%, #73d6dd 60%);
+    border: 2px solid grey;
+    padding: 2rem;
+      
+    @include respond(phone) {
+        height: 45rem;
+    }
+    @include respond(phonefour) {
+        height: 33rem;
+    }
+}
+
+.carousel-inner {
+    position: relative;
+    /* width: 100%; */
+    overflow: hidden;
+    height: 49rem;
+    /* width: 101rem; */
+    width: auto;
+    /* top: -11rem; */
+@include respond(phone) {
+    height: 40rem;
+}
+
+    @include respond(phonefour) {
+        height: 30rem;
+        top: -0.5rem;
+    }
+
+}
+
+    .carousel-indicators {
+        position: absolute;
+        /* bottom: -66px; */
+        left:39%;
+        z-index: 25;
+       //background-color: rgba($color-grey-dark, 0.6);
+
+        /* width: 88%; */
+        padding-left: 14rem;
+        /* margin-left: -120%; */
+        text-align: center;
+        transform: scale(2);
+        list-style: none;
+
+        @include respond(tab-port) {
+            left:38%;
+        }
+
+
+        @include respond(phone) {
+            left:34%;
+        }
+
+        @include respond(phonefour) {
+            transform: scale(1.7);
+            left:32%;
+        }
+        @include respond(iphone) {
+            transform: scale(1.8);
+            left: 29%;
+        }
+       @include respond(lowest) {
+        transform: scale(1.8);
+         left: 30%;
+         top: 27rem;
+        }
+
+    }
+    .carousel-indicators li {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 1px;
+        text-indent: -999px;
+        cursor: pointer;
+        background-color: #73d6dd;
+    
+        border: 1px solid black;
+
+       
+    }
+///  1st Slide 
+
+.firstPhoto {
+  position: absolute;
+  top:-10rem;
+   
+@include respond(phonefour) {
+    top: -1rem;
+}
+
+@include respond(lowest) {
+    top:0rem;
+}
+
+}
+
+.firstPhotoWicked {
+    position: absolute;
+    top: -6rem;
+
+    @include respond(tab-land) {
+        top: 2rem;
+        position: absolute;
+    }
+
+    @include respond(tab-port) {
+    top: -1rem;
+    position: absolute;
+    }
+    @include respond(phone) {
+        top: 1.7rem;
+        position: absolute;
+    }
+    @include respond(phonefour) {
+        transform: scale(1.2);
+    }
+    @include respond(lowest) {
+        height: 27rem;
+    top: 2rem;
+    }
+    
+}
+
+.firstPhotoSnow {
+   
+    position: absolute;
+    top: -7rem;
+
+    @include respond(tab-land) {
+        top: 1rem;
+        position: absolute;
+    }
+
+    @include respond(tab-port) {
+    top: -2rem;
+    position: absolute;
+    }
+    @include respond(phone) {
+        top: 1.7rem;
+        position: absolute;
+    }
+
+    @include respond(phonefour) {
+        transform: scale(1.2);
+    }
+    
+}
+
+
+
+// 2nd Pic Config Maui
+.secPhotoMaui {
+
+    position: absolute;
+    top: -25rem;
+
+    @include respond(tab-land) {
+        top: -7rem;
+        position: absolute;
+    }
+
+    @include respond(tab-port) {
+    top: -6rem;
+    position: absolute;
+    }
+    @include respond(phonefour) {
+        top: -4rem;
+        transform: scale(1.1, 0.9);
+        width: 100%;
+        left: -2rem;
+    }
+    @include respond(lowest) {
+        top: -4rem;
+        transform: scale(1.1, 0.9);
+        width: 100%;
+        left: -2rem;
+    }
+    
+}
+
+// 2nd Pic Config Paradise
+
+.secPhotoParadise {
+    position: absolute;
+    top: -8rem;
+
+    @include respond(tab-land) {
+        top: -3rem;
+        position: absolute;
+    }
+
+    @include respond(tab-port) {
+    top: -6rem;
+    position: absolute;
+    }
+    @include respond(phone) {
+        top: 1.7rem;
+        position: absolute;
+    }
+    
+}
+
+
+.secPhotoWhammy {
+
+    position: absolute;
+    top: -13rem;
+
+    @include respond(tab-land) {
+        top: -7rem;
+        position: absolute;
+    }
+
+    @include respond(tab-port) {
+    top: -9rem;
+    position: absolute;
+    }
+    @include respond(phone) {
+        top: 1.7rem;
+        position: absolute;
+    }
+    
+}
+
+
+
+// Maui and Mexican Roll Caption Config
+.caption {
+    font-size: 8rem;
+    top: -3rem;
+    position: relative;
+    font-family: 'Abel', sans-serif;
+    background: rgba(#36d1a2, 0.8);
+    display: inline-block;
+    border-radius: 3rem;
+
+    color: rgb(255, 255, 255);
+    animation-name: moveInRolls;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    @include respond(phonefour) {
+        font-size: 5rem;
+    top: -2rem;
+    left: 0rem;
+    }
+}
+
+
+.caption2 {
+    font-size: 8rem;
+    top: -3rem;
+    position: relative;
+    font-family: 'Abel', sans-serif;
+    background: rgba(#36d1a2, 0.8);
+    display: inline-block;
+    border-radius: 3rem;
+
+
+    color: rgb(255, 255, 255);
+    animation-name: moveInRolls;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    @include respond(phonefour) {
+        font-size: 5rem;
+    top: -2rem;
+    left: 0rem;
+    }
+}
+
+// Paradise and OMG Caption Config
+
+
+
+.caption4 {
+    font-size: 8rem;
+    top: -3rem;
+    position: relative;
+    font-family: 'Abel', sans-serif;
+    background: rgba(#36d1a2, 0.8);
+    display: inline-block;
+    border-radius: 3rem;
+
+    color: rgb(255, 255, 255);
+    animation-name: moveInRolls;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    @include respond(phonefour) {
+        font-size: 5rem;
+    top: -2rem;
+    left: 0rem;
+    }
+}
+
+// Haha and Wicked Config
+
+
+
+.caption5 {
+    font-size: 8rem;
+    top: -3rem;
+    position: relative;
+    font-family: 'Abel', sans-serif;
+    background: rgba(#36d1a2, 0.8);
+    display: inline-block;
+    border-radius: 3rem;
+
+    color: rgb(255, 255, 255);
+    animation-name: moveInRolls;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    @include respond(phonefour) {
+        font-size: 5rem;
+    top: -2rem;
+    left: 0rem;
+    }
+    }
+    
+
+    
+    .caption6{
+        font-size: 8rem;
+        top: -3rem;
+        position: relative;
+        font-family: 'Abel', sans-serif;
+        background: rgba(#36d1a2, 0.8);
+        display: inline-block;
+        border-radius: 3rem;
+
+        color: rgb(255, 255, 255);
+        animation-name: moveInRolls;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        @include respond(phonefour) {
+            font-size: 5rem;
+        top: -2rem;
+        left: 0rem;
+        }
+    }
+
+
+//Snow Crab and Whammy Config
+
+    .caption7 {
+        font-size: 8rem;
+        top: -3rem;
+        position: relative;
+        font-family: 'Abel', sans-serif;
+        background: rgba(#36d1a2, 0.8);
+        display: inline-block;
+        border-radius: 3rem;
+
+        color: rgb(255, 255, 255);
+        animation-name: moveInRolls;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
+        @include respond(phonefour) {
+            font-size: 5rem;
+        top: -2rem;
+        left: 0rem;
+        }
+    }
+        
+    
+        
+        .caption8  {
+            font-size: 8rem;
+            top: -3rem;
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-family: 'Abel', sans-serif;
+            background: rgba(#36d1a2, .8);
+            display: inline-block;
+            border-radius: 3rem;
+
+            animation-name: moveInRolls;
+            animation-duration: 1.2s;
+
+            @include respond(phonefour) {
+                font-size: 5rem;
+            top: -2rem;
+            left: 0rem;
+            }
+        
+        }
+
+        
+
+      //  data-ride="carousel" data-interval="800"
+
+     // .rollsHeader {
+        //  position: absolute;
+         // font-size: 8rem;
+         // top:-10rem;
+        //  left: 36%;
+       //   color:rgb(58, 70, 63);
+     // }

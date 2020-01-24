@@ -1,0 +1,115 @@
+.header {
+    height: 95vh;             //Background image position as well as polygon film
+    background-image: linear-gradient(
+    to right bottom,
+     rgba($color-primary-light, .65),     
+      rgba($color-primary-dark, .65)),
+      url(../img/sushi.jpg);
+    background-size: cover; 
+    background-position: top;
+    position: relative;
+    font-weight: bold;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    animation: slide 7s infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @include respond(phone) {
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        background-attachment: unset;
+        background-repeat: unset;
+
+  }
+    &__logo-box {
+        position: absolute;
+        top: 20.5rem;
+        left: 43rem;      //Positiioning of icon in top left corner 
+        
+    }
+
+    &__logo {
+    height: 4.5rem;     // Size of logo
+      }
+
+    &__text-box {
+    position: absolute;
+  
+    top:40%;                //POSITION OF "Gozen - Sushi & Teppanyaki" TEXTBOX ON PAGE
+    left:50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    text-shadow: .5rem 1rem 2rem rgba($color-black, .4);
+
+    
+
+     }
+}
+
+
+.headerlocation {
+  height: 150vh;             //Background image position as well as polygon film
+  //background:rgb(208, 212, 216);
+  background:rgb(208, 212, 216);
+  
+      
+  font-family: 'Gayathri', sans-serif;
+  border: 0px solid rgb(75, 91, 161);
+  background-size: cover; 
+  background-position: top;
+  font-weight: bold;
+  /* Create the parallax scrolling effect */
+
+
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @include respond(tab-land) {
+  
+  }
+
+  @include respond(tab-port) {
+
+  }
+  @include respond(phone) {
+
+  }
+  @include respond(phonefour) {
+    
+  }
+  @include respond(iphone) {
+    height: 137vh;
+  }
+  @include respond(lowest) {
+  height: 113vh;
+  }
+
+//@include respond(lowest) {
+// height: 115vh;
+
+//}
+  &__logo-box {
+      position: absolute;
+      top: 20.5rem;
+      left: 43rem;      //Positiioning of icon in top left corner 
+      
+  }
+
+  &__logo {
+  height: 4.5rem;     // Size of logo
+    }
+
+  &__text-box {
+  position: absolute;
+
+  top:40%;                //POSITION OF "Gozen - Sushi & Teppanyaki" TEXTBOX ON PAGE
+  left:50%;
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  text-shadow: .5rem 1rem 2rem rgba($color-black, .4);
+
+   }
+}
+
+
+

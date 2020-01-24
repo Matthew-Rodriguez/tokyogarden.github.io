@@ -1,0 +1,14 @@
+.u-center-text { text-align:center; 
+
+    @include respond(smalltweak) {
+       
+    }
+
+}
+
+.u-margin-bottom-small { margin-bottom: 2rem; } // VARIABLE THROWN AROUND TO GENERATE BOTTOM SPACE. h1 > p 
+
+.u-margin-medium { margin-bottom: 4rem; }
+
+.u-margin-bottom-big { margin-bottom: 8rem; } // VARIABLE FOR MAIN h1 . NEEDS ALOT OF SPACE BEFORE CONTENT.
+

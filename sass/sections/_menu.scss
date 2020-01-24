@@ -1,0 +1,568 @@
+col-menu-grid {
+  
+    //float:left;
+    //width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+
+    @include clearfix;
+}
+
+.menutext {
+
+    background-color: #f7f7f7;
+    text-align: center;
+    font-size: 8rem;
+    height: 25rem;
+    padding-top: 9rem;
+    //background: linear-gradient(120deg, #36d1a2 40%, #73d6dd 60%);
+    //border-bottom: 2px solid rgb(166, 206, 176);
+    color: white;
+    color:#444444;
+    text-shadow: .1rem .1rem 0rem rgba($color-black, 2);
+    display: block;
+    margin-left: -3rem;
+    text-transform: uppercase;
+    font-family: "Abel", sans-serif;
+
+    @include respond(lowest) {
+margin-left: -1rem;
+    
+}
+}
+
+#housecolor {
+    background-color: rgba($color: #22ca92, $alpha: .2);
+    &:hover {
+        background-color: rgba($color: #444444, $alpha: 1.0);
+        color:white;
+    }
+}
+
+.housemenu {
+    
+    position: relative;
+    left: 107%;
+    width: 150%;
+
+
+    @include respond(tab-land) {
+        width: 250%; left: 61%;
+    }
+  
+    @include respond(tab-port) {
+        width: 250%; left: 66%;
+    }
+    @include respond(phone) {
+        width: 250%; left: 58%;
+    }
+    @include respond(phonefour) {
+        width: 250%; left: 25%;
+    }
+    @include respond(minitweak) {
+        width: 250%; left: 20%;
+    }
+    @include respond(iphone) {
+        width: 250%; left: 20%;
+    }
+    @include respond(lowest) {
+        width: 250%; left: 10%;
+    }
+    @include respond(smalltweak) {
+        left:29%;
+    }
+    @media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+        width: 250%; left: 27%;
+    }
+  
+   
+}
+
+
+.menubar {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 40px;
+    background-color: #f7f7f7;
+    grid-column-gap: 60px;
+    
+    font-family: "Nanum Myeongjo", sans-serif;  
+
+    @include respond(phone) {
+    padding: 7px;
+    grid-column-gap: 24px;
+    }
+    @include respond(lowest) {
+        margin-top: -3rem;
+    }
+
+}
+ 
+.menunav {
+    background-color: white;
+    border: 0.3px solid rgba(201, 193, 193, 0.8);
+    border-radius: 10%;
+    box-shadow: 0 0.5rem 0.5rem rgba($color-black, .5);       
+    padding: 8px;
+    text-transform: uppercase;
+    
+    margin-bottom: 6rem;
+    text-decoration: none;
+    font-size: 2.3rem;
+    text-align: center;
+    color:#444444;
+
+    @include respond(lowest) {
+        font-size: 2rem;
+    }
+
+    &:hover {
+        background-color: rgba($color: #444444, $alpha: 1.0);
+        color: white;
+        transform: scale(1.2);
+        text-decoration: none;
+        text-shadow: 0rem 0rem 0rem rgba($color-black, 2);
+
+        &:active {
+            transform: translateY(-1px);
+            box-shadow: 0 .5rem 1rem rgba($color-black, .2);        // ON CLICK ADDS PUSH DOWN ANIMATION AND SHADOW
+        
+        }
+    }
+
+
+}
+
+._itemname {
+    text-transform: uppercase;
+   float: left;
+   font-weight:700 ;
+   font-size: 2rem;
+   color:#444444;
+      display: list-item;
+
+   @include respond(tab-port) {
+              margin-right: 50%;
+              max-width: 88rem;
+   }
+   @include respond(phone) {
+       margin-right:0%;
+   }
+
+   @include respond(phonefour) {
+    margin-left: -17rem;
+    margin-right: -2%;
+    font-size: 2.5rem;
+   }
+   @include respond(iphone) {
+       font-size: 1.8rem;
+   }
+}
+
+.description {
+                            //Side Items need 3 lines descripition or else bottom side piece will take up the margin n make it look weird
+   display: block;
+    float: left;
+    text-transform: uppercase;
+    font-weight: 330;
+    font-size: 1.5rem;
+    
+   // align-;
+
+   @include respond(tab-port) {
+       padding:0rem 3rem;
+      
+       max-width: 88rem;
+        transform: translateX(-25px);
+   }
+   @include respond(phone) {
+    padding: 0rem 3rem;
+    max-width: 88rem;
+    margin-right: -9rem;
+    transform: translateX(-21px);
+   }
+   @include respond(phonefour) {
+    padding: 2rem 3rem;
+    max-width: 88rem;
+    margin-right: -26rem;
+ 
+    transform: translate(-158px, 22px);
+   }
+   @include respond(lowest) {
+    transform: translate(-147px, 12px);
+   }
+}
+
+.price {
+    font-weight: 500;
+    color:#444444;
+        display: inline-block;
+    position: relative;
+    right: -3%;
+
+    @include respond(tab-port) {
+        margin-left: -50%;
+        max-width: 88rem;
+
+    }
+    @include respond(phone) {
+            /* margin-left: -50%; */
+    margin-left: 16rem;
+    max-width: 88rem;
+    display: grid;
+    }
+
+    @include respond(iphone) {
+        margin-left:11rem;
+    }
+}
+
+
+.section-menu {
+    background-color: $color-grey-light-1;
+    text-align: center;
+    padding: 7rem;
+    font-size: 1.6rem;
+    
+    margin-top: -34rem;
+
+    @include respond(tab-port) {
+        padding: 0rem;
+        padding-top: 5rem;
+    }
+}
+
+.sushimenu {
+    font-size: 4rem;
+    text-align: center;
+     margin-left: -5rem;
+    //font-weight: 1000;
+    color:#444444;
+    font-family: "Nanum Myeongjo", sans-serif;
+    border-bottom: 2px solid black;
+    display: block;
+    padding: 2rem;
+    border-radius: 10%;
+
+    @include respond(phone) {
+    margin-left: 4%;
+    }
+}
+
+.menutitle {
+    font-size: 2rem;
+    font-family: "Nanum Myeongjo", sans-serif;
+    margin: -6%;
+    position: absolute;
+    display: inline-block;
+    
+    font-weight: 330;
+    color:#444444;
+    border-bottom: 2px solid black;
+    
+    transform:scale(1) translateY(-5.4rem);
+
+}
+
+.section-teppan {
+    background-color: $color-grey-light-1;
+    text-align: center;
+    margin-top: -12rem;
+    font-size: 1.6rem;
+    padding: 5rem;
+        //04 : 
+}
+.section2-teppan {
+    background-color: $color-grey-light-1;
+    text-align: center;
+    margin-top: -12rem;
+    font-size: 1.6rem;
+    padding: 5rem;
+
+        @include respond(tab-land) {
+            background-color: #f7f7f7;
+            text-align: center;
+            margin-top: -18rem;
+            font-size: 1.6rem;
+            padding: 5rem;
+            margin-bottom: 10rem;
+        }
+        
+        @include respond(tab-port) {
+            background-color: #f7f7f7;
+            text-align: center;
+            margin-top: -16rem;
+            font-size: 1.6rem;
+            padding: 5rem;
+            margin-bottom: 11rem;
+        }
+
+
+        @include respond(phone) {
+
+    background-color: #f7f7f7;
+    text-align: center;
+    margin-top: -28rem;
+    font-size: 1.6rem;
+    padding: 5rem;
+    margin-bottom: 0rem;
+        }
+}
+
+.teppanmenu {
+
+   font-size: 4rem;
+   font-family: "Nanum Myeongjo", sans-serif;
+   margin: -8.2%;
+   position: absolute;
+   margin-left: 33%;
+   width: -1%;
+   color:#444444;
+   border-bottom: 2px solid black;
+   border-radius: 10%;
+   @include respond(tab-land) {
+    left:10%;
+}
+
+@include respond(tab-port) {
+    left: 5%;
+}
+@include respond(phone) {
+    text-align: center;
+    margin-left: 31rem;
+}
+
+@include respond(phonefour) {
+    margin-left: 23rem;
+}
+@include respond(iphone) {
+    margin-left: 13.5rem;
+    margin-top: -7rem;
+}
+@include respond(lowest) {
+    margin-left: 17rem;
+}
+@include respond(smalltweak) {
+    margin-left: 13rem;
+}
+}
+
+
+
+
+.teppan2menu {
+
+    font-size: 4rem;
+    font-family: "Nanum Myeongjo", sans-serif;
+    margin: -8.2%;
+    position: absolute;
+    margin-left: 24%;
+    width: -1%;
+    color:#444444;
+    border-bottom: 2px solid black;
+    border-radius: 10%;
+    @include respond(tab-land) {
+        left:5%;
+    }
+
+    @include respond(tab-port) {
+       text-align: center;
+    }
+    @include respond(phone) {
+        transform: translate(-26px);
+         text-align: center;
+
+    }
+    @include respond(phonefour) {
+        transform: translate(-83px);
+    text-align: center;
+    margin-top: -10rem;
+    }
+
+    @include respond(iphone) {
+        margin-top: -14rem;
+        margin-left: 9rem;
+    }
+    @include respond(lowest) {
+        transform: translate(-34px, 36px);
+    }
+    @include respond(smalltweak) {
+        transform: translate(-53px, 13px);
+    }
+ }
+
+.teppanNote {
+    text-align: center;
+    margin-bottom: -1rem;
+    padding-bottom: 5rem;
+
+    @include respond(phone) {
+        padding-bottom: 4rem;
+    }
+}
+
+
+.section-app {
+    background-color: $color-grey-light-1;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 5rem;
+    margin-top: -6rem;
+        //04 : 
+}
+
+.appmenu {
+    font-size: 4rem;
+    font-family: "Nanum Myeongjo", sans-serif;
+    margin: -9.3%;
+    margin-left: 32%;
+    position: absolute;
+    display: inline-block;
+    width: -6%;
+    color:#444444;
+    border-radius: 10%;
+ border-bottom: 2px solid black;
+
+ @include respond(tab-land) {
+    left:12%;
+}
+
+@include respond(tab-port) {
+    left: 9%;
+    transform: translate(0px);
+}
+@include respond(phone) {
+    transform: translate(5px);
+    text-align: center;
+}
+@include respond(iphone) {
+    transform: translate(-1.5rem);
+    margin-top: -7rem;
+
+}
+@include respond(lowest) {
+    transform: translateX(-27px);
+
+}
+@include respond(smalltweak) {
+    padding: 0rem;
+     margin-top: -10rem;
+}
+
+}
+
+
+
+.section-deserts {
+    background-color: $color-grey-light-1;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 5rem;
+    margin-top: -22rem;
+        //04 : 
+        
+}
+
+.desertmenu {
+    font-size: 4rem;
+    font-family: "Nanum Myeongjo", sans-serif;
+    margin: -7.2%;
+    margin-left: 48rem;
+    left: 15rem;
+    position: absolute;
+   
+    color:#444444;
+    border-bottom: 2px solid black;
+    border-radius: 10%;
+
+    @include respond(tab-land) {
+        margin-left: 33rem;
+
+    }
+
+    @include respond(tab-port) {
+        margin-left: 32rem;
+    }
+
+    @include respond(phone) {
+        margin-left: 18rem;
+    }
+
+    @include respond(phonefour) {
+        margin-left: 10rem;
+    }
+    @include respond(iphone){
+        margin-left: 3rem;
+      
+        margin-top: -10rem;
+    }
+    @include respond(lowest) {
+        margin-left: 9rem;
+    }
+    }
+
+
+.section-combo {
+    background-color: $color-grey-light-1;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 5rem;
+    margin-top: -22rem;
+    
+        //04 : 
+
+      
+}
+
+.combomenu {
+    font-size: 4rem;
+    font-family: "Nanum Myeongjo", sans-serif;
+    margin: -7.2%;
+    position: absolute;
+    margin-left: 27%;
+    width: -1%;
+    margin-top: -10rem;
+    color:#444444;
+    border-bottom: 2px solid black;
+    border-radius: 10%;
+
+    @include respond(tab-land) {
+        margin-left: 19%;
+    }
+
+    @include respond(tab-port) {
+        margin-left: 26rem;
+    }
+
+    @include respond(phone) {
+        margin-left: 14rem;
+    }
+    @include respond(phonefour) {
+        margin-left: 7rem;
+    }
+    @include respond(iphone) {
+        margin-left: 0rem;
+    }
+    @include respond(lowest) {
+       
+    }
+ }
+
+
+
+.myGrid {
+    display: flex;
+    grid: template columns 10px;
+    font-size: 2rem;
+    display: inline-block;
+    padding:4rem;
+    margin-bottom: 10rem;
+    position: relative;
+}
+
+.myprice {
+display: absolute;
+right:20px;
+    
+}

@@ -1,0 +1,125 @@
+body {
+    font-family: "Nanum Myeongjo", sans-serif;
+    font-weight: 400;
+    /*font-size: 16px;*/ 
+    line-height: 1.7;
+    color:$color-grey-dark;
+   
+
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.heading-primary {                          //GOZENS HEADER TEXTBOX -->
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    
+&--main {
+    display:block;
+    font-size: 8rem;
+    font-weight: 400;                   // 'GOZEN' 
+    letter-spacing: 3.5rem;     
+    animation-name:moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    text-shadow: .1rem .1rem 0rem rgba($color-black, 2);
+    transform: translateX(5px);
+
+    @include respond(phone) {
+        letter-spacing: 1rem;
+        font-family: 5rem;
+    }
+}
+ 
+&--sub {
+    display: block;                     // 'Sushi & Teppanyaki
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.30rem;
+    text-shadow: .1rem .1rem 0rem rgba($color-black, 2); 
+    padding: 1rem;   
+
+    animation-name: moveInRight;
+    animation-duration: 2.4s;
+    animation-timing-function: ease-out;
+
+    @include respond(phone) {
+        letter-spacing: .5rem;
+       
+    }
+    }
+}
+  
+.heading-secondary {
+    font-size: 4rem;                  // 'About Header
+    text-transform: uppercase;
+    font-weight: 700;                       
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    background-clip:text;
+    color:transparent;
+    letter-spacing: .2rem;
+    transition: all .2;
+    text-shadow: .1rem .1rem 0rem rgba($color-black, 0.1); 
+
+@include respond(tab-port) {
+    font-size: 3rem;
+}
+
+@include respond(phone) {
+    font-size: 2.5rem;
+}
+
+    &:hover {
+        transform: scale(1);                // ON HOVER GENERATE SHADOW
+
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 2000;
+    font-size: 2rem;
+    text-transform: uppercase;          // BOLD TEXT ABOVE P ELEMENTS, MAIN TEXT
+}
+
+.paragraph {                            // TEXT UNDERNEATH, DESCRIPTIOMN
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+    padding-bottom: 1rem;
+
+    &:not(:last-child) {                //SELECTS ALL CONTENT EXCEPT LAST CHILD ELEMENT. SO WE DONT HAVE UNNECESSARY MARGIN ON LAST TEXT.
+        margin-bottom: 3rem;            // It is mostly used to add the content after every child element except the last.
+    }                                   
+}
+
+.heading2-secondary {
+    font-size: 4.5rem;                 
+    font-weight: 700;                       
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    background-clip:text;
+    color:transparent;
+    letter-spacing: .2rem;
+    transition: all .2;
+    
+
+    position: relative;
+   
+
+    &:hover {
+        transform: scale(1);                // ON HOVER GENERATE SHADOW
+
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+}

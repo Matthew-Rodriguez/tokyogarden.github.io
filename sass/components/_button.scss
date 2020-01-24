@@ -1,0 +1,188 @@
+
+
+.btn {              
+
+    &:link,
+    &:visited {                 
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;                   // TEXT, PADDING, SIZING OF BUTTON
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .4s;
+        position: relative;
+        font-size: $default-font-size;
+    }    
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 1rem rgba($color-black, .1);         // ON HOVER GENERATE SHADOW AND UPSIZING 
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);                 //ON HOVER GENERATES POP AT YOU ANIMATION
+            opacity: 0;
+        }
+    }
+    
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);        // ON CLICK ADDS PUSH DOWN ANIMATION AND SHADOW
+    
+    }
+    
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;                    // COLORING
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+    
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position:absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;                // STYLING FOR ANIMATION OF POP AT YOU. ABOVE IS ANIMATION
+        transition: all .4s;
+    } 
+    
+    &--animated {
+        animation: moveInBottom 1s ease-out .75s;
+        animation-fill-mode: backwards;                     // MORE STYLING OF ANIMATION ON CLICK
+    }
+}
+
+.btn-text {
+    &:link,                                            //STYLING OF 'LEARN MORE' 
+    &:visited {
+        font-size: $default-font-size;
+        color:$color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+
+
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0rem 1rem 2rem rgba($color-black, .35);
+        transform: translateY(-2px);                                                //ON HOVER POP UP, SHADOW.... of 'LEARN MORE'
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black, .1);                // ON CLICK on 'LEARN MORE'
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+.location-btn {              
+
+    &:link,
+    &:visited {                 
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;                   // TEXT, PADDING, SIZING OF BUTTON
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        left:44%;
+        top:20rem;
+        font-size: $default-font-size;
+
+        @include respond(tab-land) {
+            top: 13rem;
+            left: 60%;
+        }
+
+        @include respond(tab-port) {
+            top: 15rem;
+             left: 60rem;
+        
+        }
+        @media only screen 
+        and (min-device-width : 768px) 
+        and (max-device-width : 1024px)  {top:24vh;}
+
+        @include respond(phone) {
+            top: 19rem;
+            left: 50rem;
+        }
+        @include respond(phonefour) {
+            top: 17rem;
+            left: 39rem;
+        }
+        
+        @include respond(iphone) {
+            left: 32rem;
+    top: 22rem;
+        }
+       @include respond(lowest) {
+            top:18rem;
+           left: 32rem;
+     
+        }
+        @media only screen 
+        and (device-width : 375px) 
+        and (device-height : 812px) 
+        and (-webkit-device-pixel-ratio : 3) { top: 24rem; 
+        left: 35rem; }
+    }    
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 1rem rgba($color-black, .1);         // ON HOVER GENERATE SHADOW AND UPSIZING 
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);                 //ON HOVER GENERATES POP AT YOU ANIMATION
+            opacity: 0;
+        }
+    }
+    
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);        // ON CLICK ADDS PUSH DOWN ANIMATION AND SHADOW
+    
+    }
+    
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;                    // COLORING
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+    
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position:absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;                // STYLING FOR ANIMATION OF POP AT YOU. ABOVE IS ANIMATION
+        transition: all .4s;
+    } 
+    
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;                     // MORE STYLING OF ANIMATION ON CLICK
+    }
+}

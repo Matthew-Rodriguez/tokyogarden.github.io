@@ -1,0 +1,90 @@
+
+@keyframes moveInLeft {          // HEADER ANIMATION LEFT -->
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    80% {
+        transform: translateX(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80% {
+        transform: translateX(-1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {                                                    
+        opacity: 0;
+        transform: translateY(30px);
+    }
+   
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}                                            
+  //HEADER ANIMATION TO RIGHT  
+
+  @keyframes moveInRolls {
+    0% {                                                    
+        opacity: 0.2;
+        transform: translate(3rem, 3rem);
+    }
+    50% {
+        opacity: 0.2;
+        transform: translateX(10rem);
+    }
+   
+    100% {
+        opacity: 1;
+        transform: translate(1);
+    }
+}                                
+
+@keyframes slide{
+25% {
+    background-image: linear-gradient(
+        to right bottom,
+         rgba($color-primary-light, .65),     
+          rgba($color-primary-dark, .65)), url(../img/usb/teppanfire.png);
+        
+}
+50% {
+    background-image: linear-gradient(
+        to right bottom,
+         rgba($color-primary-light, .65),     
+          rgba($color-primary-dark, .65)), url(../img/sashimi2.jpg);
+}
+75% {
+    background-image: linear-gradient(
+        to right bottom,
+         rgba($color-primary-light, .65),     
+          rgba($color-primary-dark, .65)), url(../img/usb/teppanfire.png);
+
+}
+100% {
+    background-image: linear-gradient(
+        to right bottom,
+         rgba($color-primary-light, .65),     
+          rgba($color-primary-dark, .65)), url(../img/sushi.jpg);
+}
+
+
+
+ }
+

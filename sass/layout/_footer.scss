@@ -1,0 +1,112 @@
+.footer {
+    background-color: $color-grey-dark-1;
+    padding: 5rem 0;        // FOOTER POSITONING, FONT, BACKGROUND POLYGON
+    font-size: 1.4rem;
+    margin-top: -10rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
+
+    @include respond(tab-port) {
+        padding: 8rem 0;
+    }
+
+    @include respond(lowest) {
+        clip-path: polygon(0 0, 100% 0, 100% 114vh, 0 100%);
+        margin-top: -18rem;
+
+    }
+
+    &__logo-box {
+        text-align: center;
+        margin-bottom: 5rem;  
+        margin-bottom: 5%;
+
+        @include respond(tab-port) {
+         margin-bottom: 6rem;
+         padding: 0 3rem;
+      }
+        //FOOTER ICON PIC ALIGN AND BOTTOM MARGIN
+    }
+
+    &__logo {           // FOOTER ICON POSITONING
+        width: 10rem;
+        height: auto;
+    }
+
+    &__navigation {
+        border-top: 1px solid $color-grey-dark; // LINE ABOVE TEXT
+        padding-top: 2rem;
+        display: inline-block;
+
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+      }
+      @include respond(lowest) {
+        margin-top: 1rem;
+      }
+    
+    }
+
+    &__list {
+        list-style-type: none;  
+
+        @include respond(lowest) {
+            margin-bottom: 2rem;
+             margin-top: 2rem;
+        }
+    }
+
+    &__item {
+        display: inline-block;      // ITEM INLINE-BLOCK
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;   // EVERY ELEMNT EXCEPT LAST SPACING GAP
+
+            @include respond(lowest) {
+             margin-right: 1.5rem;
+            padding: 1rem 1rem;             
+            
+            }
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {         // STYLING OF ALL LINKS;
+            color: $color-grey-light-1;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            
+        }
+
+        &:hover,
+        &:active {      //ON HOVER ADD GREEN COLOR AND SHADOW
+            color: $color-primary;
+            box-shadow: 0 1rem 2rem rgba($color-black, .4);
+        }
+
+    }
+
+    &__copyright {      // COPYRIGHT POSITIONING p
+        border-top: 1px solid $color-grey-dark;     
+        padding-top: 2rem;
+        width: 80%;
+        float: right;
+
+        @include respond(tab-port) {
+            width: 100%;
+            float: none;
+      }
+
+      @include respond(lowest) {
+        margin-bottom: 11rem;
+        margin-top: -6rem;
+        text-align: center;
+      }
+    }
+}
+
+.hourstag {
+    color: white;
+}
